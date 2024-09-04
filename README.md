@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+MGI Frontend
+Prueba Técnica: Desarrollo de un Módulo de Gestión de Inventarios
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es el frontend del módulo de gestión de inventarios, desarrollado para interactuar con el backend del sistema MSI. Fue construido usando React y Bootstrap, proporcionando una interfaz de usuario moderna y responsiva.
 
-## Available Scripts
+Características
+Autenticación: Implementa login y logout de usuarios.
+CRUD de Productos: Permite la creación, lectura, actualización y eliminación de productos.
+Interfaz de Usuario: Usa Bootstrap 5 para estilizar componentes y tablas.
+Validaciones en Frontend: Validaciones de campos para prevenir el envío de formularios incompletos o con datos incorrectos.
+Requisitos Previos
+Antes de comenzar, asegúrate de tener lo siguiente instalado:
 
-In the project directory, you can run:
+Node.js (versión 14 o superior)
+npm o yarn
+Git
+Instalación
+Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local.
 
-### `npm start`
+Clona el repositorio:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copiar código
+git clone https://github.com/tu-usuario/mgi-front.git
+cd mgi-front
+Instala las dependencias:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copiar código
+npm install
+o si prefieres usar yarn:
 
-### `npm test`
+bash
+Copiar código
+yarn install
+Configura las variables de entorno:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Asegúrate de tener el archivo .env en la raíz del proyecto con la siguiente configuración:
 
-### `npm run build`
+plaintext
+Copiar código
+REACT_APP_API_URL=http://localhost:8000/api
+JWT_SECRET=tu_secreto_jwt
+Inicia el servidor de desarrollo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copiar código
+npm start
+o con yarn:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copiar código
+yarn start
+Esto iniciará la aplicación en modo de desarrollo. Abre http://localhost:3000 en tu navegador para ver la aplicación en funcionamiento.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Uso
+Login:
 
-### `npm run eject`
+Accede a la página de login e introduce las credenciales proporcionadas.
+Si el login es exitoso, serás redirigido al módulo CRUD de productos.
+Gestión de Productos:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Usa la interfaz para crear, editar o eliminar productos.
+Cada operación hace una solicitud al backend para mantener los datos sincronizados.
+Backend
+Este proyecto está diseñado para consumir los endpoints de la API del backend de MSI. Asegúrate de que el backend esté corriendo y disponible en la URL configurada en el archivo .env.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Repositorio del backend: MSI Backend
+Contribución
+Si deseas contribuir al proyecto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Realiza un fork del repositorio.
+Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+Realiza tus cambios y haz un commit (git commit -am 'Añadir nueva funcionalidad').
+Sube la rama (git push origin feature/nueva-funcionalidad).
+Abre un Pull Request.
+Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
